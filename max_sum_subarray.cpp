@@ -25,7 +25,7 @@ int maxCrossingSum(int arr[], int l, int m, int h)
     }
     sum=0;
     int rightSum =INT_MIN;
-    for (int i = m; i <= h; i++)
+    for (int i = m+1; i <= h; i++)
     {
         sum = sum + arr[i];
         if (sum > rightSum)
@@ -34,7 +34,7 @@ int maxCrossingSum(int arr[], int l, int m, int h)
         }
     }
 
-    return max(leftSum + rightSum - arr[m], leftSum, rightSum);
+    return max(leftSum + rightSum , leftSum, rightSum);
 }
 
 int maxSubArraySum(int arr[], int l, int h)
