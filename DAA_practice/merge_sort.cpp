@@ -65,7 +65,7 @@ void iterativeMergeSort(int arr[], int n)
         for (int l = 0; l < n - 1; l += 2 * p)
         {
             int mid = min(l + p - 1, n - 1);
-            int h = min(l + 2 * p - 1, n - 1);
+            int h = min(l + 2 * p - 1, n - 1);  
             Rmerge(arr, l, mid, h);
         }
     }
